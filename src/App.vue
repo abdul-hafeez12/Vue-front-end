@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div>
+  <b-card no-body>
+    <b-tabs card>
+      <b-tab title="Enter Data" active>
+        <div class="container">
+          <MyForm />
+        </div>
+        
+      </b-tab>
+      <b-tab title="View Data">
+       <div class="container">
+          <MyTable />
+        </div>
+      </b-tab>
+    </b-tabs>
+  </b-card>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MyForm from './components/MyForm.vue'
+import MyTable from './components/MyTable.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MyForm,
+    MyTable,
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
